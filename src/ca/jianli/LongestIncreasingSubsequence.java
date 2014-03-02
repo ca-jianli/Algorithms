@@ -12,8 +12,16 @@ import java.util.ArrayList;
 public class LongestIncreasingSubsequence {
 
 	public static ArrayDeque<Integer> lsi(int[] input) {
+		// longest(i) is the index k of input[k], which is the last element of 
+		// a increasing subsequence of length i.
+		// longest(0) is not valid for non-trivial input, and has a value of -1.
+		
 		ArrayList<Integer> longest = new ArrayList<Integer>();
 		longest.add(-1);
+		
+		// prev[i] contains the previous element index of the last element of a
+		// increasing subsequence. 
+		
 		int[] prev = new int[input.length];
 		for (int i = 0; i < input.length; i++) {
 			int insertLocation = bst(input, longest, i);
@@ -25,12 +33,13 @@ public class LongestIncreasingSubsequence {
 			prev[i] = longest.get(insertLocation - 1);
 		}
 
-		// build output from prev[]
+		// build longest subsequence output from prev[]
+		
 		ArrayDeque<Integer> output = new ArrayDeque<Integer>();
-		int start = longest.get(longest.size() - 1);
-		while (start != -1) {
-			output.addFirst(input[start]);
-			start = prev[start];
+		int last = longest.get(longest.size() - 1);
+		while (last != -1) {
+			output.addFirst(input[last]);
+			last = prev[last];
 		}
 		return output;
 	}
