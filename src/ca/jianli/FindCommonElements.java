@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * A simple program to find the common elements (overlap) between two sorted
  * arrays A and B. O(n)
  * 
- * @author jli132
+ * @author Jian Li
  * 
  */
 public class FindCommonElements {

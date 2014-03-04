@@ -3,8 +3,9 @@ package ca.jianli;
 /**
  * Reverse bits in a Integer.  Same as Integer.reverse(int a);
  * >>> right sfift withouy sign extension.
- * O(logN) where N is number of bits.
- * @author jli132
+ * O(logn) where n is number of bits.
+ * 
+ * @author Jian Li
  *
  */
 public class ReverseBits {

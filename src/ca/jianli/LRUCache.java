@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Implements a Least Recently Used cache.  
  * oj.leetcode.com/problems/lru-cache
  * 
- * @author jli132
+ * @author Jian Li
  * 
  */
 

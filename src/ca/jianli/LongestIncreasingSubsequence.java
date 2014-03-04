@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Find the longest increasing subsequence in an array of integers. O(nlogn)
  * http://en.wikipedia.org/wiki/Longest_increasing_subsequence
- * @author Jian
+ * @author Jian Li
  * 
  */
 public class LongestIncreasingSubsequence {
