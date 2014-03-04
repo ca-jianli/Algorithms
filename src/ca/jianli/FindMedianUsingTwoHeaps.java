@@ -11,11 +11,11 @@ import java.util.PriorityQueue;
  * @author Jian Li
  * 
  */
-public class FindMedianUsingTwoHeap {
+public class FindMedianUsingTwoHeaps {
 	PriorityQueue<Integer> minHeap;
 	PriorityQueue<Integer> maxHeap;
 
-	public FindMedianUsingTwoHeap() {
+	public FindMedianUsingTwoHeaps() {
 		minHeap = new PriorityQueue<Integer>(1);
 		maxHeap = new PriorityQueue<Integer>(1, Collections.reverseOrder());
 	}

@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class FindMedianUsingTwoHeapTest {
+public class FindMedianUsingTwoHeapsTest {
 
 	@Test
 	public void test1() {
-		FindMedianUsingTwoHeap dut = new FindMedianUsingTwoHeap();
+		FindMedianUsingTwoHeaps dut = new FindMedianUsingTwoHeaps();
 		dut.add(1);
 		assertEquals(1.0, dut.getMedian(), 0.001);
 		dut.add(2);
