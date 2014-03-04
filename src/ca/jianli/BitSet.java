@@ -10,11 +10,9 @@ package ca.jianli;
 
 public class BitSet {
 	int[] mem;
-	int count;
 
 	public BitSet(int capacity) {
 		mem = new int[(capacity + 31) / 32];
-		count = 0;
 	}
 
 	public void set(int key) {
