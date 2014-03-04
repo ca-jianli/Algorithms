@@ -10,13 +10,16 @@ package ca.jianli;
 
 public class SqrtDouble {
 	public static double sqrt(double x, double tol) {
-		if (x < 0)
-			throw new IllegalArgumentException("Negative input not allowed");
-		
-		double candidate, lo, hi;
-		lo = 0;
-		hi = x;
-		candidate = (lo + hi) / 2.0;
+		if (x == 0)
+			return 0;
+
+		if (x < 0 || tol <= 0)
+			throw new IllegalArgumentException(
+					"Negative input and/or non-positive tolerance not allowed");
+
+		double lo = 0;
+		double hi = x;
+		double candidate = (lo + hi) / 2.0;
 		while (lo < hi - tol) {
 			if (Math.abs(x / candidate - candidate) < tol)
 				break;

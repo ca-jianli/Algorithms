@@ -8,17 +8,29 @@ public class SqrtDoubleTest {
 
 	@Test
 	public void test1() {
-		assertEquals(2.0, SqrtDouble.sqrt(4.0, 0.01), 0.001);
+		double in = 4;
+		double tol = in * 0.01;
+		assertEquals(Math.sqrt(in), SqrtDouble.sqrt(in, tol), tol);
 	}
 
 	@Test
 	public void test2() {
-		assertEquals(Math.sqrt(12345), SqrtDouble.sqrt(12345, 0.01), 0.001);
+		double in = 12345;
+		double tol = in * 0.01;
+		assertEquals(Math.sqrt(in), SqrtDouble.sqrt(in, tol), tol);
 	}
 
 	@Test
 	public void test3() {
-		assertEquals(0, SqrtDouble.sqrt(0, 0.01), 0.001);
+		double in = 0;
+		double tol = in * 0.01;
+		assertEquals(Math.sqrt(in), SqrtDouble.sqrt(in, tol), tol);
 	}
 
+	@Test
+	public void test4() {
+		double in = Double.MAX_VALUE;
+		double tol = in * 0.01;
+		assertEquals(Math.sqrt(in), SqrtDouble.sqrt(in, tol), tol);
+	}
 }
