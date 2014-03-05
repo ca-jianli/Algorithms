@@ -3,7 +3,7 @@ package ca.jianli;
 /**
  * Implement Knuth-Morris-Pratt (KMP) substring search algorithm
  * 
- * @author jli132
+ * @author Jian Li
  * 
  */
 public class KMPSubstrSearch {
