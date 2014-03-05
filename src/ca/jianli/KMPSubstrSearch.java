@@ -29,7 +29,7 @@ public class KMPSubstrSearch {
 
 	}
 
-	public int substring(String text) {
+	public int find(String text) {
 
 		// state correspond to number of matching chars
 
