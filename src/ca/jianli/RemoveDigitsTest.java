@@ -18,4 +18,11 @@ public class RemoveDigitsTest {
 		assertEquals(0, RemoveDigits.getNew(42319, 6));
 	}
 
+	@Test
+	public void test2() {
+		assertEquals(0, RemoveDigits.getNew(100, 1));
+		assertEquals(10, RemoveDigits.getNew(230010, 2));
+		assertEquals(0, RemoveDigits.getNew(230010, 3));
+		assertEquals(0, RemoveDigits.getNew(230010, 4));
+	}
 }

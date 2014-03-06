@@ -12,34 +12,26 @@ import java.util.Stack;
  * 
  */
 public class RemoveDigits {
-	public static int getNew(int x, int k) {
+	public static int getNew(int num, int k) {
 
-		if (x < 0)
+		if (num < 0)
 			throw new IllegalArgumentException("Input must be greater than 0.");
 
 		Stack<Integer> s = new Stack<Integer>();
-		int n = 1;
+		char[] in = new Integer(num).toString().toCharArray();
 
-		// n = 100, for x = {100...999}
-
-		while (x / (n * 10) > 0) {
-			n *= 10;
-		}
-
-		while (n > 0) {
+		for (char c : in) {
 
 			// if current digit is smaller than the previous digit remove the
 			// previous digit, it's better to remove the digit before.
 
-			int msb = x / n;
+			int msb = c - '0';
 			while (!s.isEmpty() && msb < s.peek() && k > 0) {
 				s.pop();
 				k--;
 			}
 
 			s.push(msb);
-			x -= n * msb;
-			n /= 10;
 		}
 
 		// if finished and still need to remove more digit, start from the end
