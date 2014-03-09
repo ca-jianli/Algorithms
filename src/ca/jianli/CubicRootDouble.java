@@ -1,5 +1,11 @@
 package ca.jianli;
 
+/**
+ * Implement cubic root of an double using binary search.
+ * 
+ * @author Jian Li
+ * 
+ */
 public class CubicRootDouble {
 	public static double cubic(double x, double tol) {
 		if (x == 0)
