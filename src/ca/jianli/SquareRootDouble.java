@@ -8,7 +8,7 @@ package ca.jianli;
  * 
  */
 
-public class SqrtDouble {
+public class SquareRootDouble {
 	public static double sqrt(double x, double tol) {
 		if (x == 0)
 			return 0;
@@ -19,7 +19,11 @@ public class SqrtDouble {
 
 		double lo = 0;
 		double hi = x;
-		double candidate = (lo + hi) / 2.0;
+
+		// for x < 1, candidate is between x and 1.
+
+		double candidate = Math.max(1, (lo + hi) / 2.0);
+		
 		while (lo < hi - tol) {
 			if (Math.abs(x / candidate - candidate) < tol)
 				break;
