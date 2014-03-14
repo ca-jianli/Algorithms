@@ -9,7 +9,7 @@ package ca.jianli;
  */
 
 public class SquareRootDouble {
-	public static double sqrt(double x, double tol) {
+	public static double solution1(double x, double tol) {
 		if (x == 0)
 			return 0;
 

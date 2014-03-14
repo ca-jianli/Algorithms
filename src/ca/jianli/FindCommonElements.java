@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * 
  */
 public class FindCommonElements {
-	public static ArrayList<Integer> findCommon(int[] A, int[] B) {
+	public static ArrayList<Integer> solution1(int[] A, int[] B) {
 		ArrayList<Integer> res = new ArrayList<Integer>();
 		if (A.length == 0 || B.length == 0)
 			return res;

@@ -9,7 +9,7 @@ package ca.jianli;
  *
  */
 public class ReverseBits {
-	public static int reverse(int x) {
+	public static int solution1(int x) {
 		// ABCD_DCBA
 		x = ((x & 0x0000FFFF) << 16) | ((x & 0xFFFF0000) >>> 16);
 		// DCBA_ABCD

@@ -13,9 +13,9 @@ public class FindKthSmallestInTwoSortedArraysTest {
 	public void test1() {
 		int[] a = new int[] { 1, 2 };
 		int[] b = new int[] { 3 };
-		assertEquals(2, FindKthSmallestInTwoSortedArrays.findKth(a, b, 2));
-		assertEquals(1, FindKthSmallestInTwoSortedArrays.findKth(a, b, 1));
-		assertEquals(3, FindKthSmallestInTwoSortedArrays.findKth(a, b, 3));
+		assertEquals(2, FindKthSmallestInTwoSortedArrays.solution1(a, b, 2));
+		assertEquals(1, FindKthSmallestInTwoSortedArrays.solution1(a, b, 1));
+		assertEquals(3, FindKthSmallestInTwoSortedArrays.solution1(a, b, 3));
 
 	}
 
@@ -23,12 +23,12 @@ public class FindKthSmallestInTwoSortedArraysTest {
 	public void test2() {
 		int[] a = new int[] { 1, 2, 3 };
 		int[] b = new int[] { 2, 3, 4 };
-		assertEquals(2, FindKthSmallestInTwoSortedArrays.findKth(a, b, 3));
-		assertEquals(2, FindKthSmallestInTwoSortedArrays.findKth(a, b, 2));
-		assertEquals(3, FindKthSmallestInTwoSortedArrays.findKth(a, b, 4));
-		assertEquals(3, FindKthSmallestInTwoSortedArrays.findKth(a, b, 5));
-		assertEquals(1, FindKthSmallestInTwoSortedArrays.findKth(a, b, 1));
-		assertEquals(4, FindKthSmallestInTwoSortedArrays.findKth(a, b, 6));
+		assertEquals(2, FindKthSmallestInTwoSortedArrays.solution1(a, b, 3));
+		assertEquals(2, FindKthSmallestInTwoSortedArrays.solution1(a, b, 2));
+		assertEquals(3, FindKthSmallestInTwoSortedArrays.solution1(a, b, 4));
+		assertEquals(3, FindKthSmallestInTwoSortedArrays.solution1(a, b, 5));
+		assertEquals(1, FindKthSmallestInTwoSortedArrays.solution1(a, b, 1));
+		assertEquals(4, FindKthSmallestInTwoSortedArrays.solution1(a, b, 6));
 	}
 
 	@Test
@@ -54,7 +54,7 @@ public class FindKthSmallestInTwoSortedArraysTest {
 			Arrays.sort(c);
 
 			assertEquals(c[k - 1],
-					FindKthSmallestInTwoSortedArrays.findKth(a, b, k));
+					FindKthSmallestInTwoSortedArrays.solution1(a, b, k));
 		}
 	}
 }

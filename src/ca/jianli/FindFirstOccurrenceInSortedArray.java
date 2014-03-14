@@ -8,7 +8,7 @@ package ca.jianli;
  * 
  */
 public class FindFirstOccurrenceInSortedArray {
-	public static int findFirst(int[] nums, int target) {
+	public static int solution1(int[] nums, int target) {
 		int lo = 0;
 		int hi = nums.length - 1;
 		while (lo < hi) {

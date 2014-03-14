@@ -14,7 +14,7 @@ public class FindCommonElementsTest {
 		int[] B = new int[] { 2, 4 };
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(2);
-		assertEquals(expected, FindCommonElements.findCommon(A, B));
+		assertEquals(expected, FindCommonElements.solution1(A, B));
 	}
 
 	@Test
@@ -22,7 +22,7 @@ public class FindCommonElementsTest {
 		int[] A = new int[] {};
 		int[] B = new int[] {};
 		ArrayList<Integer> expected = new ArrayList<Integer>();
-		assertEquals(expected, FindCommonElements.findCommon(A, B));
+		assertEquals(expected, FindCommonElements.solution1(A, B));
 	}
 
 	@Test
@@ -32,7 +32,7 @@ public class FindCommonElementsTest {
 		ArrayList<Integer> expected = new ArrayList<Integer>();
 		expected.add(4);
 		expected.add(6);
-		assertEquals(expected, FindCommonElements.findCommon(A, B));
+		assertEquals(expected, FindCommonElements.solution1(A, B));
 	}
 
 	@Test
@@ -45,6 +45,6 @@ public class FindCommonElementsTest {
 		expected.add(4);
 		expected.add(5);
 		expected.add(6);
-		assertEquals(expected, FindCommonElements.findCommon(A, B));
+		assertEquals(expected, FindCommonElements.solution1(A, B));
 	}
 }

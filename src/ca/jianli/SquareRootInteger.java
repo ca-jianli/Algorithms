@@ -8,7 +8,7 @@ package ca.jianli;
  */
 
 public class SquareRootInteger {
-	public static int sqrt(int x) {
+	public static int solution1(int x) {
 		if (x == 0)
 			return 0;
 

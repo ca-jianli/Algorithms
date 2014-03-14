@@ -10,7 +10,7 @@ package ca.jianli;
  * 
  */
 public class QuickSelect {
-	public static int qs(int[] nums, int k) {
+	public static int solution1(int[] nums, int k) {
 		if (k > nums.length || k < 1)
 			throw new IllegalArgumentException("K is not Valid.");
 

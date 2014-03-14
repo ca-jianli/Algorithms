@@ -14,7 +14,7 @@ package ca.jianli;
  */
 
 public class BigIntegerMultiplication {
-	public static int[] multiply(int[] a, int[] b) {
+	public static int[] solution1(int[] a, int[] b) {
 		int a_size = a.length;
 		int b_size = b.length;
 		int[] res = new int[a_size + b_size];

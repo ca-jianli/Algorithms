@@ -10,7 +10,7 @@ import java.util.Stack;
  * 
  */
 public class EvaluateExpressionAddMultiply {
-	public static int eval(String expression) {
+	public static int solution1(String expression) {
 
 		// maintain a stack of numbers to be added
 

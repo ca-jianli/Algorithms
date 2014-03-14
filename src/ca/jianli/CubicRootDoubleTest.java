@@ -13,27 +13,27 @@ public class CubicRootDoubleTest {
 
 		double x;
 		x = 100;
-		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.cubic(x, x * 0.01),
+		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.solution1(x, x * 0.01),
 				x * 0.01);
 		x = 1;
-		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.cubic(x, x * 0.01),
+		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.solution1(x, x * 0.01),
 				x * 0.01);
 		x = 0.5;
-		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.cubic(x, x * 0.01),
+		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.solution1(x, x * 0.01),
 				x * 0.01);
 		x = 0;
-		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.cubic(x, x * 0.01),
+		assertEquals(Math.pow(x, 1.0 / 3), CubicRootDouble.solution1(x, x * 0.01),
 				x * 0.01);
 		for (int i = 0; i < 100; i++) {
 			x = new Random().nextDouble() * 100;
 			assertEquals(Math.pow(x, 1.0 / 3),
-					CubicRootDouble.cubic(x, x * 0.01), x * 0.01);
+					CubicRootDouble.solution1(x, x * 0.01), x * 0.01);
 
 			// tolerance for x < 1 needs to be increased.
 
 			x = new Random().nextDouble();
 			assertEquals(Math.pow(x, 1.0 / 3),
-					CubicRootDouble.cubic(x, x * 0.001), x * 0.01);
+					CubicRootDouble.solution1(x, x * 0.001), x * 0.01);
 		}
 
 	}

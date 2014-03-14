@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class LongestIncreasingSubsequence {
 
-	public static ArrayDeque<Integer> lsi(int[] input) {
+	public static ArrayDeque<Integer> solution1(int[] input) {
 		// longest(i) is the index k of input[k], which is the last element of
 		// a increasing subsequence of length i.
 		// longest(0) is not valid for non-trivial input, and has a value of -1.
@@ -73,7 +73,7 @@ public class LongestIncreasingSubsequence {
 		int[] input = new int[] { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3,
 				11, 7, 15 };
 
-		System.out.println(lsi(input));
+		System.out.println(solution1(input));
 
 		System.out.println("Finish");
 

@@ -12,7 +12,7 @@ import java.util.Stack;
  * 
  */
 public class RemoveDigits {
-	public static int getNew(int num, int k) {
+	public static int solution1(int num, int k) {
 
 		if (num < 0)
 			throw new IllegalArgumentException("Input must be greater than 0.");

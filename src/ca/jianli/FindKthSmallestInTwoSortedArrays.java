@@ -9,7 +9,7 @@ package ca.jianli;
  * 
  */
 public class FindKthSmallestInTwoSortedArrays {
-	public static int findKth(int[] A, int[] B, int k) {
+	public static int solution1(int[] A, int[] B, int k) {
 		return findKth(A, 0, B, 0, k);
 	}
 

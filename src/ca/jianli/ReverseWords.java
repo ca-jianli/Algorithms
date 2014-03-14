@@ -13,7 +13,7 @@ package ca.jianli;
  * 
  */
 public class ReverseWords {
-	public static String reverseWords(String s) {
+	public static String solution1(String s) {
 		StringBuilder sb = new StringBuilder();
 
 		int i, j;

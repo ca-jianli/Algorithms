@@ -12,16 +12,16 @@ public class FindFirstOccurrenceInSortedArrayTest {
 	@Test
 	public void test1() {
 		int[] nums = new int[] { 1, 2, 2 };
-		assertEquals(0, FindFirstOccurrenceInSortedArray.findFirst(nums, 1));
-		assertEquals(1, FindFirstOccurrenceInSortedArray.findFirst(nums, 2));
-		assertEquals(-1, FindFirstOccurrenceInSortedArray.findFirst(nums, 0));
+		assertEquals(0, FindFirstOccurrenceInSortedArray.solution1(nums, 1));
+		assertEquals(1, FindFirstOccurrenceInSortedArray.solution1(nums, 2));
+		assertEquals(-1, FindFirstOccurrenceInSortedArray.solution1(nums, 0));
 	}
 
 	@Test
 	public void test2() {
 		int[] nums = new int[] { -1, -1, 2, 2, 3, 3, 3, 4, 4, 5, 5 };
-		assertEquals(2, FindFirstOccurrenceInSortedArray.findFirst(nums, 2));
-		assertEquals(4, FindFirstOccurrenceInSortedArray.findFirst(nums, 3));
+		assertEquals(2, FindFirstOccurrenceInSortedArray.solution1(nums, 2));
+		assertEquals(4, FindFirstOccurrenceInSortedArray.solution1(nums, 3));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class FindFirstOccurrenceInSortedArrayTest {
 				}
 			}
 			assertEquals(expected,
-					FindFirstOccurrenceInSortedArray.findFirst(nums, target));
+					FindFirstOccurrenceInSortedArray.solution1(nums, target));
 		}
 	}
 }

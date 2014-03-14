@@ -7,7 +7,7 @@ package ca.jianli;
  * 
  */
 public class CubicRootDouble {
-	public static double cubic(double x, double tol) {
+	public static double solution1(double x, double tol) {
 		if (x == 0)
 			return 0;
 
