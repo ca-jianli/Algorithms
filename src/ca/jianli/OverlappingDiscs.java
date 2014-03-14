@@ -45,9 +45,35 @@ public class OverlappingDiscs {
 		return ret;
 	}
 
+	/**
+	 * O(N) solution using counting. Instead of sorting, we track the number of
+	 * intervals starting and ending at each i. Active tracks the existing
+	 * overlapping intervals. Any interval starting at i would form i *
+	 * active[i] number of pairs. In addition, we add (N, 2) combinations of all
+	 * intervals starting at i.
+	 * 
+	 * @param A
+	 * @return
+	 */
 	public static int solution2(int[] A) {
 		int ret = 0;
+		int[] start = new int[A.length];
+		int[] end = new int[A.length];
+		int[] active = new int[A.length];
+		for (int i = 0; i < A.length; i++) {
+			start[Math.max(0, i - A[i])]++;
+			end[Math.min(A.length - 1, i + A[i])]++;
+		}
+		for (int i = 1; i < A.length; i++) {
+			active[i] = active[i - 1] + start[i - 1] - end[i - 1];
+		}
 
+		for (int i = 0; i < start.length; i++) {
+			if (start[i] == 0)
+				continue;
+			ret += start[i] * active[i];
+			ret += start[i] * (start[i] - 1) / 2;
+		}
 		return ret;
 	}
 
@@ -74,7 +100,7 @@ public class OverlappingDiscs {
 		int lo = 0;
 		int hi = list.size() - 1;
 		while (lo <= hi) {
-			int mid = (lo + hi) / 2;
+			int mid = lo + (hi - lo) / 2;
 			if (list.get(mid).start > list.get(i).end) {
 				hi = mid - 1;
 			} else {

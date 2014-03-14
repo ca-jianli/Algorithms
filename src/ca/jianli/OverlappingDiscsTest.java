@@ -12,9 +12,9 @@ public class OverlappingDiscsTest {
 				OverlappingDiscs.solution1(new int[] { 1, 5, 2, 1, 4, 0 }));
 	}
 	
-//	@Test
-//	public void test2() {
-//		assertEquals(11,
-//				OverlappingDiscs.solution2(new int[] { 1, 5, 2, 1, 4, 0 }));
-//	}
+	@Test
+	public void test2() {
+		assertEquals(11,
+				OverlappingDiscs.solution2(new int[] { 1, 5, 2, 1, 4, 0 }));
+	}
 }
