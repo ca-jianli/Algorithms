@@ -27,7 +27,9 @@ public class PlantingFlags {
 
 		// bisection
 		int lo = 2;
-		int hi = numPeaks;
+		int hi = (int) Math.sqrt(A.length) + 1; // can at most take SQRT(N)
+												// flags
+
 		while (lo <= hi) {
 			int mid = lo + (hi - lo) / 2;
 			if (check(mid, peaks)) {
@@ -42,10 +44,6 @@ public class PlantingFlags {
 
 	/**
 	 * Check if N flags can be planted with each flag at least N distance apart.
-	 * 
-	 * @param max
-	 * @param peaks
-	 * @return
 	 */
 	private static boolean check(int N, boolean[] peaks) {
 		int flags = 0;
