@@ -1,6 +1,5 @@
 package ca.jianli;
 
-import java.util.Random;
 
 /**
  * Calculate the number of elements of an array that are not divisors of each
@@ -47,18 +46,4 @@ public class PrimeNondivisors {
 		return res;
 	}
 
-	public static void main(String[] args) {
-		Random r = new Random();
-		int N = r.nextInt(10);
-		int[] input = new int[N];
-		for (int i = 0; i < N; i++) {
-			input[i] = r.nextInt(N * 2) + 1;
-			System.out.print(input[i] + " ");
-		}
-		System.out.println();
-		int[] res = solution(input);
-		for (int n : res) {
-			System.out.print(n + " ");
-		}
-	}
 }
