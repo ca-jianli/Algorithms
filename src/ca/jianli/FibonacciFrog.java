@@ -64,9 +64,4 @@ public class FibonacciFrog {
 
 		return -1;
 	}
-
-	public static void main(String[] arg) {
-		System.out
-				.println(solution(new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }));
-	}
 }
