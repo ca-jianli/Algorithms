@@ -61,7 +61,4 @@ public class PlantingFlags {
 		return false;
 	}
 
-	public static void main(String[] args) {
-	}
-
 }

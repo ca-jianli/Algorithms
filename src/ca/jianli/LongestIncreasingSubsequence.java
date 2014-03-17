@@ -66,16 +66,4 @@ public class LongestIncreasingSubsequence {
 		}
 		return lo;
 	}
-
-	public static void main(String[] args) {
-		System.out.println("Start");
-
-		int[] input = new int[] { 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3,
-				11, 7, 15 };
-
-		System.out.println(solution1(input));
-
-		System.out.println("Finish");
-
-	}
 }
