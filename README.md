@@ -1,4 +1,4 @@
-JavaSnippets
+Algorithms
 ============
 
 short programs and algorithms
